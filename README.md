@@ -20,16 +20,3 @@ from the initial idea to the finished product.
 <img align="left" alt="GitHub" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
 <img align="left" alt="npm" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" />
 <br/>
-
-#
-
-### 📚 Currently Learning
-
-
-#
-
-<!--<details>
- <summary><h3>👨‍💻 Dan's Lore</h3></summary>
-  I started my coding journey around 10+ years ago when i fell in love with the modding community for Minecraft, Since that day i dabbled in coding periodically learning new things everytime i coded. After a small break while finishing highschool I went into graphic design but slowly realized that wasnt for me and transtioned back into coding, in the past 5 years ive coded almost everyday, completed 2 years of Computer Science classes & done some freelance work, 
-  The transtion was fairly easy as i knew all the fundimentals from 10+ years ago and maily benifited from learning Data Structures & Algorithms.
-  The Background in Graphic design has been very useful its really taught me how to build a roadmap and achive the final product without having anything yet, Just like the process of art and building and layering shape to achive the final image Code is very similar its layering and integrating code together to get a final project.-->
