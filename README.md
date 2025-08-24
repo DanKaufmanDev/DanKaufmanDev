@@ -29,10 +29,4 @@ I'm a Software Developer with a former background in art, combining creativity w
   <img align="center" alt="RUST" width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg" />
 </div>
 
-## Analytics
-
-<div align="center">
-<a href="https://danielkaufman.dev"><img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=DanKaufmanDev&layout=compact&langs_count=8&theme=dark"/></a>
-</div> 
-
 ## 
