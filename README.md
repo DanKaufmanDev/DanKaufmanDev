@@ -26,6 +26,7 @@ I'm a Software Developer with a former background in art, combining creativity w
 
 <div align="center">
   <img align="center" alt="RUST" width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg" />
+  <img align="center" alt="GO" width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg" />
 </div>
 
 ## 
