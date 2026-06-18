@@ -1,42 +1,46 @@
-name: Update DKDOS profile
+name: Update DKDOS status
 
 on:
   schedule:
-    - cron: "30 9 * * *"
+    - cron: "*/59 * * * *"
   workflow_dispatch:
   push:
     branches:
       - main
     paths:
-      - "data/**"
+      - "data/language.json"
       - "scripts/**"
       - ".github/workflows/update-dkdos.yml"
 
 permissions:
   contents: write
 
+concurrency:
+  group: dkdos-status
+  cancel-in-progress: true
+
 jobs:
-  update-dkdos:
+  update:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout profile repository
         uses: actions/checkout@v4
 
-      - name: Update GitHub profile data
-        run: node scripts/update-stats.js
+      - name: Read GitHub profile status
+        run: node scripts/update-github-status.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PROFILE_USER: DanKaufmanDev
 
-      - name: Build DKDOS SVG screens
-        run: node scripts/build-dkdos.js
+      - name: Regenerate DKDOS
+        run: node scripts/generate-dkdos-svg.js
 
-      - name: Commit refreshed DKDOS assets
+      - name: Commit status change
         run: |
-          if ! git diff --quiet -- assets screens data/stats.json; then
+          if ! git diff --quiet -- README.md assets/dkdos.svg data/status.json; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add assets screens data/stats.json
-            git commit -m "chore: refresh DKDOS profile"
+            git add README.md assets/dkdos.svg data/status.json
+            git commit -m "chore: update DKDOS status"
             git push
           fi
