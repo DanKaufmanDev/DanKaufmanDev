@@ -1,32 +1,17 @@
-<span><img src="https://imgur.com/RNtNV7U.png" /></span>
-**`Developer`** **`Artist`**
-
-## About Me
-
-I'm a Software Developer with a former background in art, combining creativity with technical precision. I build projects with a strong emphasis on UI/UX, making sure not only does it looks good but feels great to use.
-
-## Tech Stack
+# DKDOS
 
 <div align="center">
-  <img align="center" alt="HTML" width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
-  <img align="center" alt="CSS" width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
-  <img align="center" alt="JavaScript" width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" /> 
-  <img align="center" alt="TypeScript" width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
-  <img align="center" alt="VueJS" width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" />
-  <img align="center" alt="React" width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
-  <img align="center" alt="Tailwind" width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
-  <img align="center" alt="Python" width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
-  <img align="center" alt="Java" width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"/>
-  <img align="center" alt="NodeJS" width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
-  <img align="center" alt="Git" width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
-  <img align="center" alt="npm" width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg" />
+  <img src="./assets/dkdos.svg" alt="Daniel Kaufman Developer Operating System" width="100%" usemap="#dkdos-map" />
 </div>
 
-## Currently Learning
-
-<div align="center">
-  <img align="center" alt="RUST" width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg" />
-  <img align="center" alt="GO" width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg" />
-</div>
-
-## 
+<map name="dkdos-map">
+  <area alt="projects" title="projects" href="./screens/projects.svg" coords="80,414,270,446" shape="rect" />
+  <area alt="opensource" title="opensource" href="./screens/opensource.svg" coords="280,414,470,446" shape="rect" />
+  <area alt="experiments" title="experiments" href="./screens/experiments.svg" coords="510,414,700,446" shape="rect" />
+  <area alt="resume" title="resume" href="./screens/resume.svg" coords="80,462,270,494" shape="rect" />
+  <area alt="contact" title="contact" href="./screens/contact.svg" coords="280,462,470,494" shape="rect" />
+  <area alt="help" title="help" href="./screens/help.svg" coords="510,462,660,494" shape="rect" />
+  <area alt="sudo" title="sudo" href="./screens/sudo.svg" coords="670,462,800,494" shape="rect" />
+  <area alt="coffee" title="coffee" href="./screens/coffee.svg" coords="810,462,940,494" shape="rect" />
+  <area alt="matrix" title="matrix" href="./screens/matrix.svg" coords="810,414,940,446" shape="rect" />
+</map>
