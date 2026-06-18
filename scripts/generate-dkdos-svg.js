@@ -127,7 +127,6 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
     </style>
   </defs>
 
-  <rect width="1200" height="675" fill="#00000000"/>
   <rect x="18" y="18" width="1164" height="639" rx="12" class="frame"/>
   <rect x="34" y="34" width="1132" height="607" rx="6" class="screen"/>
 
