@@ -79,7 +79,7 @@
 
   <g class="splash-screen">
     <g class="flicker">
-      <text x="62" y="72" class="status">| DKDOS v1.0 | STATUS: ONLINE |</text>
+      <text x="62" y="72" class="status">| DKDOS v1.0 | STATUS: BUSY |</text>
       <text xml:space="preserve" class="logo">
         <tspan x="322" y="108">╔══════════════════════════════════════════════════════╗</tspan>
         <tspan x="322" y="133">║                                                      ║</tspan>
