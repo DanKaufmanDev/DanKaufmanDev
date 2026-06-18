@@ -1,0 +1,11 @@
+{
+    "loadingLines": [
+        "[ OK ] Mounted /home/daniel",
+        "[ OK ] Started DKDOS kernel",
+        "[ OK ] Loaded developer tools",
+        "[ OK ] Mounted projects",
+        "[ OK ] Synced open source modules",
+        "[ OK ] Initialized terminal interface",
+        "[ OK ] System ready"
+    ]
+}

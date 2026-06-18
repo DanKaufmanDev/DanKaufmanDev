@@ -5,51 +5,39 @@ const output = path.resolve(__dirname, "../assets/dkdos.svg");
 const languageDataPath = path.resolve(__dirname, "../data/language.json");
 const languageData = JSON.parse(fs.readFileSync(languageDataPath, "utf8"));
 const languages = languageData.languages.slice(0, 6).map((language) => `> ${language}`);
+
 const statusDataPath = path.resolve(__dirname, "../data/status.json");
 const statusData = JSON.parse(fs.readFileSync(statusDataPath, "utf8"));
+
+const bootDataPath = path.resolve(__dirname, "../data/boot.json")
+const bootData = JSON.parse(fs.readFileSync(bootDataPath, "utf-8"))
+const bootLines = bootData.bootLines.map((bootLines) => `${bootLines}`)
+
+const sysDataPath = path.resolve(__dirname, "../data/system.json")
+const sysData = JSON.parse(fs.readFileSync(sysDataPath, "utf-8"))
+const systemLines = sysData.systemLines.map((systemLines) => `${systemLines}`)
+
+const loadDataPath = path.resolve(__dirname, "../data/loading.json")
+const loadData = JSON.parse(fs.readFileSync(loadDataPath, "utf-8"))
+const loadingLines = loadData.loadingLines.map((loadingLines) => `${loadingLines}`)
+
 const profileStatus = ["ONLINE", "BUSY", "OFFLINE"].includes(statusData.status)
   ? statusData.status
   : "ONLINE";
 
-const bootLines = [
-  "[ OK ] Mounted /home/daniel",
-  "[ OK ] Started DKDOS kernel",
-  "[ OK ] Loaded developer tools",
-  "[ OK ] Mounted projects",
-  "[ OK ] Synced open source modules",
-  "[ OK ] Initialized terminal interface",
-  "[ OK ] System ready",
-];
-
 const logo = [
   "╔══════════════════════════════════════════════════════╗",
   "║                                                      ║",
-  "║     ██████╗ ██╗  ██╗██████╗  ██████╗ ███████╗        ║",
-  "║     ██╔══██╗██║ ██╔╝██╔══██╗██╔═══██╗██╔════╝        ║",
-  "║     ██║  ██║█████╔╝ ██║  ██║██║   ██║███████╗        ║",
-  "║     ██║  ██║██╔═██╗ ██║  ██║██║   ██║╚════██║        ║",
-  "║     ██████╔╝██║  ██╗██████╔╝╚██████╔╝███████║        ║",
-  "║     ╚═════╝ ╚═╝  ╚═╝╚═════╝  ╚═════╝ ╚══════╝        ║",
+  "║      ██████╗ ██╗  ██╗██████╗  ██████╗ ███████╗       ║",
+  "║      ██╔══██╗██║ ██╔╝██╔══██╗██╔═══██╗██╔════╝       ║",
+  "║      ██║  ██║█████╔╝ ██║  ██║██║   ██║███████╗       ║",
+  "║      ██║  ██║██╔═██╗ ██║  ██║██║   ██║╚════██║       ║",
+  "║      ██████╔╝██║  ██╗██████╔╝╚██████╔╝███████║       ║",
+  "║      ╚═════╝ ╚═╝  ╚═╝╚═════╝  ╚═════╝ ╚══════╝       ║",
   "║                                                      ║",
   "║           DanKaufmanDev Operating System             ║",
   "║                                                      ║",
   "╚══════════════════════════════════════════════════════╝",
-];
-
-const loadingLines = [
-  "Initializing Kernel...",
-  "Loading Projects...",
-  "Loading Open Source...",
-  "Loading Experiments...",
-  "Loading Terminal...",
-];
-
-const systemLines = [
-  "OS:      DKDOS v1.0",
-  "USER:    Daniel Kaufman",
-  "ROLE:    Developer",
-  "FOCUS:   Developer Safety",
-  "HOST:    GitHub",
 ];
 
 function escapeXml(value) {
@@ -82,7 +70,7 @@ function typedTextLines(lines, x, startY, gap, lineDelay, characterDelay, lineSt
 const svg = `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title description">
   <title id="title">DKDOS - Daniel Kaufman Developer Operating System</title>
-  <desc id="description">An animated Linux boot sequence that resolves into the DKDOS terminal splash screen.</desc>
+  <desc id="description">An animated boot sequence that resolves into the DKDOS terminal splash screen.</desc>
   <defs>
     <filter id="glow" x="-20%" y="-30%" width="140%" height="160%">
       <feGaussianBlur stdDeviation="2" result="blur"/>
@@ -104,8 +92,8 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
         font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
         letter-spacing: 0;
       }
-      .frame { fill: #010302; stroke: #176b36; stroke-width: 2; }
-      .screen { fill: #000b05; stroke: #0c4224; stroke-width: 1; }
+      .frame { fill: #01030240; stroke: #176b36; stroke-width: 2; }
+      .screen { fill: #000b0520; stroke: #0c4224; stroke-width: 1; }
       .terminal { fill: #92ff96; font-size: 21px; }
       .ok { fill: #b6ffb8; font-size: 22px; }
       .dim { fill: #4c9a5c; font-size: 15px; }
@@ -122,7 +110,7 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
       .boot-targets { animation: target-out 0.45s ease 7.35s forwards; }
       .flicker { animation: flicker 6.5s linear infinite; }
       .cursor { fill: #aaffad; animation: blink 1s steps(2, start) infinite; filter: url(#glow); }
-      .scan-pass { animation: scan 7s linear infinite; }
+      .scan-pass { animation: scan 8s linear infinite; }
       .noise { animation: noise-shift 0.24s steps(2, end) infinite; }
       @keyframes reveal { from { opacity: 0; } to { opacity: 1; } }
       @keyframes type-char { from { opacity: 0; } to { opacity: 1; } }
@@ -134,12 +122,12 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
         0%, 18%, 22%, 62%, 64%, 100% { opacity: 1; }
         20%, 63% { opacity: 0.94; }
       }
-      @keyframes scan { from { transform: translateY(-90px); } to { transform: translateY(760px); } }
+      @keyframes scan { from { transform: translateY(30px); } to { transform: translateY(600px); } }
       @keyframes noise-shift { 0% { transform: translate(0, 0); opacity: 0.13; } 100% { transform: translate(3px, -2px); opacity: 0.2; } }
     </style>
   </defs>
 
-  <rect width="1200" height="675" fill="#000"/>
+  <rect width="1200" height="675" fill="#00000000"/>
   <rect x="18" y="18" width="1164" height="639" rx="12" class="frame"/>
   <rect x="34" y="34" width="1132" height="607" rx="6" class="screen"/>
 
@@ -164,7 +152,7 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
       <text x="180" y="445" class="section timed" style="animation-delay:4.25s">SYSTEM PROFILE</text>
       ${typedTextLines(systemLines, 180, 470, 22, 4.35, 0.025, 0.55, "profile")}
       <g class="boot-targets">
-        <text x="690" y="445" class="section timed" style="animation-delay:4.25s">BOOT TARGETS</text>
+        <text x="690" y="445" class="section timed" style="animation-delay:4.25s">LOADING</text>
         ${typedTextLines(loadingLines, 690, 470, 22, 4.35, 0.025)}
       </g>
       <g class="languages">
@@ -181,7 +169,7 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
 
   <rect x="34" y="34" width="1132" height="607" rx="6" fill="url(#scanlines)" pointer-events="none"/>
   <rect x="34" y="34" width="1132" height="607" rx="6" fill="url(#noise)" class="noise" pointer-events="none"/>
-  <rect x="34" y="0" width="1132" height="76" fill="#72ff7c" opacity="0.025" class="scan-pass" pointer-events="none"/>
+  <rect x="34" y="0" width="1132" height="38" fill="#72ff7c" opacity="0.025" class="scan-pass" pointer-events="none"/>
 </svg>
 `;
 

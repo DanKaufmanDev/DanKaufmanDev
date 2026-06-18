@@ -1,0 +1,10 @@
+{
+    "bootLines": [
+        "Initializing Kernel...",
+        "Loading Projects...",
+        "Loading Open Source...",
+        "Loading Experiments...",
+        "Loading Terminal...",
+        "Testing..."
+    ]
+}
